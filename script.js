@@ -1,3 +1,14 @@
+/* possibilités : - 1 tableau pour chaque couleur, itérer dessus pour modifier les strings
+pour chaque index afin de lui rajouter la valeur numérique (mais est-ce que les index d'un
+tableau sont modifiables?)
+- ou bien faire une grosse fonction en créant les index avec des interpolations ou
+des regex, ou lui push un tableau qui se créer lui-même avec une range et des lettres
+- ou juste une double boucle de tableaux de strings et concaténer les deux pour obtenir les
+cartes en pushant vers un tableau mis en scope globale
+*/
+
+
+
 let deck = []
 
 function createDeck () {
@@ -17,7 +28,7 @@ function createDeck () {
         }
     }
     console.log(deck)
-    
+    return
 }
 
 createDeck()
