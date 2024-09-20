@@ -32,3 +32,62 @@ function createDeck () {
 }
 
 createDeck()
+
+
+function shuffle(deckArg) {
+
+    for (let i = 0; i < deckArg.length; i++) {
+        let randomI =  Math.floor(Math.random() * (deckArg.length - 0));
+        let temp = deckArg[i]; //garder en mémoire l'index actuel
+        deckArg[i] = deckArg[randomI]; //remplacer l'index actuel par un index random
+        deckArg[randomI] = temp; //l'index random devient l'index actuel. On a échangé 2 cartes
+    }
+    console.log(deckArg)
+
+    //checker s'il n'y a pas de doublon. ECHEC CA NE MARCHE PAS
+    // for (let i = 0; i < deckArg.length; i++) {
+    //     for (let j = 1; j < deckArg.length - 2; j++) {
+    //         if (deckArg[i] === deckArg[j]) {
+    //             console.error('doublons dans le deck!', i , j)
+    //         }
+    //     }    
+    // }
+    return deckArg
+}
+
+
+    
+
+
+   
+
+
+shuffle(deck)
+
+
+
+
+
+
+
+// ESSAI RATE
+//function shuffle() {
+//     console.log("test entrée shuffle")
+    
+//     for (let i = 0; i < deck; i++) {
+
+//         // let randomIndex = Math.floor(Math.random() * (deck.length - 0));
+//         // console.log("randomIndex = ", randomIndex)
+//     //     if (deck.includes(deck[randomIndex])) {
+//     //         console.log(randomIndex)
+//     //         deck.push(deck[randomIndex])
+            
+
+//     //     } else {
+//     //         console.log('ça ne marche pas')
+//     //         shuffle()
+//     //     }
+//     // }
+//     // console.log('deck = ', deck) 
+//     // console.log("deck = ", deck)
+// }}
